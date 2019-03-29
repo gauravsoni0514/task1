@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Display Records</title>
+  </head>
+  <body>
+<center>
+    <h1>List of CSV files</h1>
+    <table border="2">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Download</th>
+        </tr>
+
+      </thead>
+  <tbody>
+      {% for inputfile in inputfile %}
+<tr>
+    <td>{{ inputfile.uname}}</td>
+    <td>
+        <a href="{{ inputfile.ufile.url}}" target="_blank">Download CSV</a>
+        </td>
+
+</tr>
+      {% endfor %}
+  </tbody>
+
+
+    </table>
+<br>
+<br>
+<a href="/showfile">BACK</a>
+</center>
+  </body>
+</html>
+
